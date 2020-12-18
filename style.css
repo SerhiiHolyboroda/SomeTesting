@@ -1,0 +1,52 @@
+@keyframes circle1 {
+    from { transform:rotate(0deg); }
+    to { transform:rotate(30deg); }  
+} 
+ @keyframes circle2 {
+    from { transform:rotate(30deg); }
+    to { transform:rotate(60deg); }
+}
+
+@keyframes circle3 {
+    from { transform:rotate(60deg); }
+    to { transform:rotate(90deg); }
+}
+
+@keyframes circle4 {
+    from { transform:rotate(90deg); }
+    to { transform:rotate(120deg); }
+} 
+
+
+ @keyframes inner-circle {
+    from { transform:rotate(0deg); }
+    to { transform:rotate(-360deg); }
+ }
+@keyframes circle {
+    from { transform:rotate(0deg); }
+    to { transform:rotate(180deg); }
+}
+body > div {
+    width:100px;
+    height:100px;
+    margin: 20px auto 0;
+    color:orange;
+    font-size:100px;
+    line-height:1;
+    /* animation: circle 5s linear infinite; */
+    transform-origin:50% 200px;
+}
+
+div > div {
+    /* animation: inner-circle 5s linear infinite; */
+}
+
+/* #parent {
+	position: relative;
+	width: 300px;
+	height: 300px;
+	border: 1px solid rgba(0,0,0,0.1);
+	border-radius: 50%;
+	transform: rotate(0deg);
+	transition: transform 0.7s linear;
+} */
