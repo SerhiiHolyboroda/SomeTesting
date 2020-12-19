@@ -8,30 +8,132 @@
 let circle = document.querySelector('.circle');
 console.log(circle)
 let x = 0;
-window.addEventListener('click', function(){ 
+let y = 0
+let scrollPos = 0;
+let lastScrollTop = 0;
+
+ 
    
  
+//  window.addEventListener('scroll', function() {
+     
+//     if ((document.body.getBoundingClientRect()).top < scrollPos){
+//         x += 1;
+//         if(x == 1){
+//             circle.style.animation =  "moveDown1  3s forwards"
+//             console.log(  x)
+//         }
+//         if(x == 2){
+//             circle.style.animation =  "moveDown2 3s forwards "
+//             console.log( x)
+//         }
+//         if(x == 3){
+//             circle.style.animation =  "moveDown3 3s forwards "
+//             console.log(  x)
+//         }
+//         if(x == 4){
+//             circle.style.animation =  "moveDown4 3s forwards"
+//             console.log(  x)
+//         }
+//         scrollPos = (document.body.getBoundingClientRect()).top;
+ 
+//     }
+//     if ((document.body.getBoundingClientRect()).top > scrollPos){
+//         x += 1;
+//         if(x == 1){
+//             circle.style.animation =  "moveUp1  3s forwards"
+//             console.log(  x)
+//         }
+//         if(x == 2){
+//             circle.style.animation =  "moveUp2 3s forwards "
+//             console.log( x)
+//         }
+//         if(x == 3){
+//             circle.style.animation =  "moveUp3 3s forwards "
+//             console.log(  x)
+//         }
+//         if(x == 4){
+//             circle.style.animation =  "moveUp4 3s forwards"
+//             console.log(  x)
+//         }
+//         scrollPos = (document.body.getBoundingClientRect()).top;
+   
+//     }
+ 
+// });
 
-    // // circle.style.animation = "circle1 1s linear";
-    // x = x + 1;
-    // if(x == 0){
-    //     circle.style.animation = "circle1 1s linear";
-    //     var rect = circle.getBoundingClientRect();
-       circle.style.transform += 'rotate(20deg)';
-    //     circle.style.top = rect.top; //or whatever 
-    //     circle.style.left = rect.left; // or whatever
-    //     console.log(x)
-    // }
-    // if(x == 1){
-    //     circle.style.animation = "circle2 1s linear";
-    //     console.log(x)
-    // }
-    // if(x == 2){
-    //     circle.style.animation = "circle3 1s linear";
-    //     console.log(x)
-    // }
-    // if(x == 3){
-    //     circle.style.animation = "circle3 1s linear";
-    //     console.log(x)
-    // }
- });
+window.addEventListener('scroll', function() {
+   let st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+   if (st > lastScrollTop){
+    x +=1
+        if(y >= 0){
+            y -=1
+        }
+   
+    if(x == 0){
+        
+        circle.style.animation =  "moveDown1  3s forwards"
+        console.log(  x)
+    }
+    if(x == 1){
+        x +=1
+        if(y <= 0){
+            y -=1
+        }
+        circle.style.animation =  "moveDown2 3s forwards "
+        console.log( x)
+    }
+    if(x == 2){
+        x +=1
+        if(y <= 0){
+            y -=1
+        }
+        circle.style.animation =  "moveDown3 3s forwards "
+        console.log(  x)
+    }
+    if(x == 3){
+        x +=1
+        if(y <= 0){
+            y -=1
+        }
+        circle.style.animation =  "moveDown4 3s forwards"
+        console.log(  x)
+    }
+    if(x == 4){
+        x +=1
+        if(y <= 0){
+            y -=1
+        }
+        circle.style.animation =  "moveDown5 3s forwards"
+        console.log(  x)
+    }
+   } else {
+      
+    y +=1
+    if(x >= 0){
+        x -=1
+    }
+    if(y == 0){
+        
+        circle.style.animation =  "moveUp1  3s forwards"
+        console.log(  y)
+    }
+    if(y == 1){
+        circle.style.animation =  "moveUp2  3s forwards"
+        console.log(  y)
+    }
+    if(y == 2){
+        circle.style.animation =  "moveUp3 3s forwards "
+        console.log(y)
+    }
+    if(y == 3){
+        circle.style.animation =  "moveUp4 3s forwards "
+        console.log(  y)
+    }
+    if(y == 4){
+        circle.style.animation =  "moveUp5 3s forwards"
+        console.log(  y)
+    }
+   }
+   lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+}, false);

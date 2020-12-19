@@ -1,22 +1,4 @@
-@keyframes circle1 {
-    from { transform:rotate(0deg); }
-    to { transform:rotate(30deg); }  
-} 
- @keyframes circle2 {
-    from { transform:rotate(30deg); }
-    to { transform:rotate(60deg); }
-}
-
-@keyframes circle3 {
-    from { transform:rotate(60deg); }
-    to { transform:rotate(90deg); }
-}
-
-@keyframes circle4 {
-    from { transform:rotate(90deg); }
-    to { transform:rotate(120deg); }
-} 
-
+ 
 
  @keyframes inner-circle {
     from { transform:rotate(0deg); }
@@ -26,12 +8,12 @@
     from { transform:rotate(0deg); }
     to { transform:rotate(180deg); }
 }
-body > div {
-    width:100px;
-    height:100px;
-    margin: 20px auto 0;
+.ss {
+    width:10px;
+    height:10px;
+    /* margin: 20px auto 0; */
     color:orange;
-    font-size:100px;
+    /* font-size:100px; */
     line-height:1;
     /* animation: circle 5s linear infinite; */
     transform-origin:50% 200px;
@@ -40,7 +22,130 @@ body > div {
 div > div {
     /* animation: inner-circle 5s linear infinite; */
 }
+.circle {
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    motion-path: path('M22.9998 1C22.9998 1 649.558 119 663 589.542C655.833 1135 1 1215 1 1215');
+    offset-path: path('M22.9998 1C22.9998 1 649.558 119 663 589.542C655.833 1135 1 1215 1 1215');
+    /* animation: move1 3s linear backwards; */
+  }
+  
+  @keyframes moveDown1 {
+    to{ 
+ 
+            motion-offset: 20%;
+            offset-distance: 20%;
+            animation-fill-mode: forwards;
+          }
+     
+   
+  }
 
+  @keyframes moveDown2 {
+      from{
+        motion-offset: 20%;
+        offset-distance: 20%;
+      }
+    to{ 
+  
+            motion-offset: 40%;
+            offset-distance: 40%;
+            animation-fill-mode: forwards;
+          }}
+
+  @keyframes moveDown3 {
+    from{
+        motion-offset: 40%;
+        offset-distance: 40%;
+      }
+    to{ 
+   
+            motion-offset: 60%;
+            offset-distance: 60%;
+            animation-fill-mode: forwards;
+          }}
+
+  @keyframes moveDown4 {
+    from{
+        motion-offset: 60%;
+        offset-distance: 60%;
+      }
+   to{ 
+      motion-offset: 80%;
+      offset-distance: 80%;
+    }
+  }
+
+  @keyframes moveDown5 {
+    to{ 
+        animation-iteration-count: 1;
+            motion-offset: 100%;
+            offset-distance: 1000%;
+            animation-fill-mode: forwards;
+          }}
+
+          @keyframes moveUp1 {
+            from{
+              motion-offset: 100%;
+              offset-distance: 100%;
+            }
+            to{ 
+         
+                    motion-offset: 80%;
+                    offset-distance: 80%;
+                    animation-fill-mode: forwards;
+                  }
+             
+           
+          }
+        
+          @keyframes moveUp2 {
+              from{
+                motion-offset: 80%;
+                offset-distance: 80%;
+              }
+            to{ 
+          
+                    motion-offset: 60%;
+                    offset-distance: 60%;
+                    animation-fill-mode: forwards;
+                  }}
+        
+          @keyframes moveUp3 {
+            from{
+                motion-offset: 60%;
+                offset-distance: 60%;
+              }
+            to{ 
+           
+                    motion-offset: 40%;
+                    offset-distance: 40%;
+                    animation-fill-mode: forwards;
+                  }}
+        
+          @keyframes moveUp4 {
+            from{
+                motion-offset: 40%;
+                offset-distance: 40%;
+              }
+           to{ 
+              motion-offset: 20%;
+              offset-distance: 20%;
+            }
+          }
+        
+          @keyframes moveUp5 {
+            from{
+              motion-offset: 20%;
+              offset-distance: 20%;
+            }
+            to{ 
+                animation-iteration-count: 1;
+                    motion-offset: 0%;
+                    offset-distance: 0%;
+                    animation-fill-mode: forwards;
+                  }}
 /* #parent {
 	position: relative;
 	width: 300px;
@@ -50,3 +155,366 @@ div > div {
 	transform: rotate(0deg);
 	transition: transform 0.7s linear;
 } */
+ .large{
+   height: 10000px;
+ }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url(//db.onlinewebfonts.com/c/00d5a78493aed4b11e2584ad7cceee49?family=Gilroy+ExtraBold);
+
+/*////BANNER/////////////*/
+
+.slideShow-container{
+  max-width: 100%;
+  position: relative;
+}
+
+.bannerSettings{
+  max-height: 100vh;
+}
+
+.my-video{
+  /*position: relative;*/
+  width: 100%;
+  height: 100.55vh;
+}
+
+.video{
+  max-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.video_media{
+  height: auto;
+}
+
+
+/*.mySlides{*/
+/*  display: none;*/
+/*}*/
+
+.mySlides::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(180deg, #050D1D 11.29%, rgba(5, 13, 29, 0) 90.3%);
+  mix-blend-mode: normal;
+  opacity: 0.6;
+}
+
+.prev, .next{
+  position: absolute;
+  top: 40%;
+}
+
+.prev{
+  display: block;
+  left: 10.05%;
+  right: 88.7%;
+  /*top: 8.65%;!!!!!!!!!!!!!!!!!!!*/
+
+  bottom: 90.56%;
+  mix-blend-mode: normal;
+  opacity: 0.6;
+}
+
+.next{
+  display: block;
+  /*right: 0;*/
+  /*border-radius: 3px 0 0 3px;*/
+  left: 89.17%;
+  right: 9.58%;
+  /*top: 8.65%;!!!!!!!!!!!!*/
+  bottom: 90.56%;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+
+
+h1{
+  position: absolute;
+  height: 100px;
+  left: 0;
+  right: 23.75%;
+  /*top: calc(50% - 100px/2 - 2329.5px);*/
+  top: 23%;
+  width: 100%;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 70px;
+  line-height: 100px;
+  /* identical to box height, or 111% */
+  text-align: center;
+  color: #FFFFFF;
+}
+
+h3{
+  position: absolute;
+  height: 22px;
+  left: 30.73%;
+  right: 30.62%;
+  top: 41%;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+  /* identical to box height, or 178% */
+  letter-spacing: 0.2px;
+  color: #FFFFFF;
+}
+
+.btn-banner{
+  height: 54px;
+  width: 172px;
+  position: absolute;
+  bottom: 10%;
+  background: #00A031;
+  border-radius: 27px;
+  top: calc(50% - 22px/2);
+
+  font-family: Gilroy;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+  text-align: center;
+  letter-spacing: 0.1px;
+  color: #F4FBF6;
+
+}
+
+.arrow{
+  padding: 10px;
+  transition: .5s;
+}
+
+.arrow:hover{
+  background: gray;
+  color: green;
+}
+
+.text{
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 120px;
+  width: 100%;
+  text-align: center;
+}
+
+.dot-wrap{
+  height: 21.08433723449707px;
+  width: 21.08433723449707px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin: 0 2px;
+}
+
+/*.border{*/
+/*  border: 1px solid #00A031;*/
+/*}*/
+
+
+.dot{
+  cursor: pointer;
+  height: 12.650602340698242px;
+  width: 12.650602340698242px;
+  background: #FFFFFF;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover{
+  background: rgba(0, 160, 49, 1);
+}
+
+.test-background{
+  background-color: red;
+}
+
+.dotSettings{
+  position: absolute;
+  bottom: 10%;
+  /*left: 50%;*/
+}
+
+/*////////////BANNER END/////////////*/
+
+
+/*/////////////LOGO/////////////////*/
+header{
+  z-index: 7;
+  height: 4rem;
+  width: 100%;
+  padding: 26px 0 0 0;
+  /*background-color: lime;*/
+}
+
+.logo{
+
+  left: 19.53%;
+  right: 78.83%;
+}
+
+.upqode{
+  height: 32px;
+  left: 21.88%;
+  right: 67.95%;
+  top: calc(50% - 32px/2 - 2685.5px);
+
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 32px;
+  /* identical to box height, or 114% */
+  color: #FFFFFF;
+}
+
+/*/////////////LOGO END/////////////////*/
+
+
+/*///////////////////NAVIGATION/////////////////*/
+.home-underline{
+  text-decoration: underline;
+}
+
+nav{
+  left: 57.71%;
+  right: 19.53%;
+  /*top: calc(50% - 24px/2 - 2694.5px);*/
+  height: 24px;
+  width: 437px;
+}
+
+nav li{
+  list-style: none;
+  display: inline-block;
+  letter-spacing: 0.2px;
+  line-height: 24px;
+}
+
+nav li a{
+  display: block;
+  text-decoration: none;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  color: #FFFFFF;
+}
+/*///////////////////NAVIGATION END/////////////////*/
+
+/*//////////////////////////////!*SERVICES*!///////////////
+/*/
+.services{
+  height: 2038px;/* важливоооо*/
+  width: 1226.8px;
+
+  /*left: 300px;*/
+  left: 19.27%;
+  /*background: red;*/
+}
+
+.combined{
+  left: 5%;
+  top: 3%;
+}
+
+.phone1{
+  left: 5%;
+  top: 0;
+}
+
+.wrap-phones{
+  /*background: black;*/
+  margin-top: 8rem;
+}
+
+.container-phone{
+  /*background: yellow;*/
+  /*width: 530px;*/
+}
+
+.container-content{
+  /*background: purple;*/
+}
+
+.wrap-content{
+
+}
+
+h4{
+  font-family: Poppins;
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 51px;
+  letter-spacing: 0.4000000059604645px;
+  text-align: left;
+  color: #00A031;
+}
+
+.wrap-content span{
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.20000000298023224px;
+  text-align: left;
+}
+
+.container-content a{
+  display: flex;
+  height: 54px;
+  width: 208px;
+  border-radius: 28px;
+  text-decoration: none;
+  border: 2px solid #00A031;
+  font-family: Gilroy;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0;
+  text-align: center;
+  color: #00A031;
+}
+
+.combined2{
+  left: 11%;
+  top: 11%;
+}
+
+.phone2{
+  left: 5%;
+  top: 0;
+  transform: rotate(18deg);
+}
+
+.combined3{
+  left: 11%;
+  top: 11%;
+}
+
+.phone3{
+  left: 10%;
+  top: 0;
+}
+
+.line{
+  top: 15%;
+  left: 12.86%;
+}
+
+.blue-dot{
+  /*offset-path: path('M22.9998 1C22.9998 1 649.558 119 663 589.542C655.833 1135 1 1215 1 1215');*/
+  /*offset-distance: 10%;*/
+  top: 15%;
+  left: 12.86%;
+}
