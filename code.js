@@ -73,7 +73,7 @@ window.addEventListener('scroll', function() {
     if(x == 1){
         
         circle.style.animation =  "moveDown1  3s forwards"
-        console.log(  x)
+        console.log( "x = " +  x)
     }
     if(x == 2){
         x +=1
@@ -81,7 +81,7 @@ window.addEventListener('scroll', function() {
             y -=1
         }
         circle.style.animation =  "moveDown2 3s forwards "
-        console.log( x)
+        console.log( "x = " +  x)
     }
     if(x == 3){
         x +=1
@@ -89,7 +89,7 @@ window.addEventListener('scroll', function() {
             y -=1
         }
         circle.style.animation =  "moveDown3 3s forwards "
-        console.log(  x)
+        console.log( "x = " +  x)
     }
     if(x == 4){
         x +=1
@@ -97,7 +97,7 @@ window.addEventListener('scroll', function() {
             y -=1
         }
         circle.style.animation =  "moveDown4 3s forwards"
-        console.log(  x)
+        console.log( "x = " +  x)
     }
     if(x == 5){
         x +=1
@@ -105,7 +105,7 @@ window.addEventListener('scroll', function() {
             y -=1
         }
         circle.style.animation =  "moveDown5 3s forwards"
-        console.log(  x)
+        console.log( "x = " +  x)
     }
    } else {
       
@@ -116,23 +116,23 @@ window.addEventListener('scroll', function() {
     if(y == 1){
         
         circle.style.animation =  "moveUp1  3s forwards"
-        console.log(  y)
+        console.log( "y = " +  y)
     }
     if(y == 2){
         circle.style.animation =  "moveUp2  3s forwards"
-        console.log(  y)
+        console.log( "y = " +  y)
     }
     if(y == 3){
         circle.style.animation =  "moveUp3 3s forwards "
-        console.log(y)
+        console.log( "y = " +  y)
     }
     if(y == 4){
         circle.style.animation =  "moveUp4 3s forwards "
-        console.log(  y)
+        console.log( "y = " +  y)
     }
     if(y == 5){
         circle.style.animation =  "moveUp5 3s forwards"
-        console.log(  y)
+        console.log( "y = " +  y)
     }
    }
    lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
