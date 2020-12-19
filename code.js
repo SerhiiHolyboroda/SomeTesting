@@ -70,12 +70,12 @@ window.addEventListener('scroll', function() {
             y -=1
         }
    
-    if(x == 0){
+    if(x == 1){
         
         circle.style.animation =  "moveDown1  3s forwards"
         console.log(  x)
     }
-    if(x == 1){
+    if(x == 2){
         x +=1
         if(y <= 0){
             y -=1
@@ -83,7 +83,7 @@ window.addEventListener('scroll', function() {
         circle.style.animation =  "moveDown2 3s forwards "
         console.log( x)
     }
-    if(x == 2){
+    if(x == 3){
         x +=1
         if(y <= 0){
             y -=1
@@ -91,7 +91,7 @@ window.addEventListener('scroll', function() {
         circle.style.animation =  "moveDown3 3s forwards "
         console.log(  x)
     }
-    if(x == 3){
+    if(x == 4){
         x +=1
         if(y <= 0){
             y -=1
@@ -99,7 +99,7 @@ window.addEventListener('scroll', function() {
         circle.style.animation =  "moveDown4 3s forwards"
         console.log(  x)
     }
-    if(x == 4){
+    if(x == 5){
         x +=1
         if(y <= 0){
             y -=1
@@ -113,27 +113,28 @@ window.addEventListener('scroll', function() {
     if(x >= 0){
         x -=1
     }
-    if(y == 0){
+    if(y == 1){
         
         circle.style.animation =  "moveUp1  3s forwards"
         console.log(  y)
     }
-    if(y == 1){
+    if(y == 2){
         circle.style.animation =  "moveUp2  3s forwards"
         console.log(  y)
     }
-    if(y == 2){
+    if(y == 3){
         circle.style.animation =  "moveUp3 3s forwards "
         console.log(y)
     }
-    if(y == 3){
+    if(y == 4){
         circle.style.animation =  "moveUp4 3s forwards "
         console.log(  y)
     }
-    if(y == 4){
+    if(y == 5){
         circle.style.animation =  "moveUp5 3s forwards"
         console.log(  y)
     }
    }
    lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+//    https://stackoverflow.com/questions/31223341/detecting-scroll-direction
 }, false);
